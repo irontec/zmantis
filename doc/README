@@ -1,0 +1,121 @@
+zmantis 1.1.9
+Mantis Bugtracking system integration into Zimbra
+
+================================
+====== Table of Contents  ======
+================================
+1.- Disclaimer
+2.- What is zmantis for?
+3.- Compatibility
+4.- Installing zMantis
+5.- Configuring zMantis
+6.- Using zMantis
+7.- Support - Contribution
+
+-----------------------------------------------------------------
+----------------- 1.- Disclaimer                 ----------------
+-----------------------------------------------------------------
+This software is under GPL v3.0 License. Please read LICENSE file
+for further information.
+
+-----------------------------------------------------------------
+----------------- 2.- What's zMantis for?         ----------------
+-----------------------------------------------------------------
+
+ zMantis is designed to search projects in Mantis Bugtracking system and add
+ desired emails (and their attachments) into Mantis Bugtracking system. 
+
+
+-----------------------------------------------------------------
+----------------- 3.- Compatibility              ----------------
+-----------------------------------------------------------------
+ zMantis has been tested in ZCS 6.x and Mantis Bugtracking system v5.5.x and above 
+ It may or may not work properly with other versions.
+
+
+-----------------------------------------------------------------
+----------------- 4.- Installing zMantis          ----------------
+-----------------------------------------------------------------
+ Refer to INSTALL file for intructions of how to install this
+ zimlet.
+
+
+-----------------------------------------------------------------
+----------------- 5.- Configuring zMantis         ----------------
+-----------------------------------------------------------------
+ There is no global configuration for zMantis, each user must 
+ configure it separately.
+
+ If zMantis has been correctly deployed, after loggin in zimbra, 
+ a new icon should apperar in the left panel. Just click it and 
+ a configuration window should appear with the following fields:
+
+ Username: Mantis Bugtracking system username
+ Password: Mantis Bugtracking system password
+ Mantis Bugtracking system URL: Mantis Bugtracking system URL direction. It should use a secure 
+	       connection, so be sure that 'https' is being used.
+ LDAP Authentication: Enable this to send clean password otherwise
+	       MD5 encryption will be used.
+ Accounts: Enable this to retrieve account informations.
+ Opportunities: Enable this to retrieve Opportunitie information.
+ Projects: Enable this to retrieve Project information.
+ Leads: Enable this to retrieve Leads information.
+ 
+ Mark exported with tag: Set the tag name that will be used 
+	to tag exported emails. If this field is empty, emails
+	won't be tagged. This feature only works from the moment
+	it is "activated", so previously exported emails won't 
+	be tagged.
+ 
+ After configuring zMantis, you can validate your connection to
+ Mantis Bugtracking system by right-clicking the zMantis icon and choosing Force
+ Authentication.
+
+-----------------------------------------------------------------
+----------------- 6.- Using zMantis               ----------------
+-----------------------------------------------------------------
+ There are three ways to access zMantis screen:
+
+ - Using the Zimlet panel: 
+   Just Drag a conversation or email and drop in the zMantis icon.
+
+ - Using Toolbar Button:
+   Select a conversation or email and click 'Send to Mantis Bugtracking system'
+   toolbar button.
+
+ - Using the context menu option:
+   Rigth click a conversation or email and click 'Send to Mantis Bugtracking system' 
+   option.
+
+ After this, a new screen will appear with following sections:
+ - Result Section:
+    This section shows Mantis Bugtracking system response results. By default, 
+    zMantis will search the FROM: contact of the email. It will show
+    Accounts, Opportunities and Projects as configured (see 5.- 
+    Configuring zMantis)
+
+ - Contacts Dropbox
+    We can request  Bugtracking system information of other contact in the selected
+    email
+
+ - Attachments list
+    If email has any attachment, a list will appear. Checked attachments
+    will be also imported into Mantis Bugtracking system 
+
+-----------------------------------------------------------------
+----------------- 7.- Support - Contribution     ----------------
+-----------------------------------------------------------------
+ This zimlet has been developed by Irontec S.L.
+	http://www.irontec.com
+
+ Base64 Library has been developed by Christian d'Heureuse.
+	http://www.source-code.biz/base64coder/java/
+
+ Please, use the following mail to report bugs or contribute
+ to its develpoment:
+
+	kaian@irontec.com
+
+
+
+

@@ -1,0 +1,58 @@
+<zimlet name="com_irontec_zmantis" version="1.1.9" description="Mantis Bugtracking integration">
+        <!-- Source Files -->
+	<include>src/md5.js</include>
+	<include>src/mantissoapapi.js</include>
+	<include>src/zmantis.js</include>
+        <include>src/AccountData.js</include>
+        <include>src/AttachmentData.js</include>
+        <include>src/CustomFieldValueForIssue.js</include>
+        <include>src/Issue.js</include>
+        <include>src/NoteData.js</include>
+        <include>src/ObjectRef.js</include>
+        <include>src/obj2WSDL.js</include>
+        <include>src/Project.js</include>
+        <include>src/RelationshipData.js</include>
+        <include>src/soapclient.js</include>
+        <include>src/map.js</include>
+        <include>src/Category.js</include>
+        <resource>src/redirect.jsp</resource>
+
+        <!-- JQuery Library & Plugins -->
+        <include>src/jquery.min.js</include>
+        <include>src/jquery.tokeninput.js</include>
+        <includeCSS>css/token-input.css</includeCSS>
+
+        <!-- Style Sheets -->
+	<includeCSS>css/zmantis.css</includeCSS>
+
+        <!-- Library JAR files -->
+        <resource>base64coder.jar</resource>
+
+        <!-- Zimlet Handler object -->
+	<handlerObject>com_irontec_zmantisH</handlerObject>
+
+        <!-- Images and other stufg -->
+	<resource>resources/ironmantis.png</resource>
+	<resource>resources/loadingbar.gif</resource>
+	<resource>resources/logoej.gif</resource>
+	<resource>resources/irontec.png</resource>
+	<resource>resources/Poweredby.png</resource>
+
+	<zimletPanelItem label="zMantis" icon="IMANTIS-panelIcon">
+		<toolTipText>${msg.zmantis_tooltip}</toolTipText>
+		<dragSource type="ZmConv" />
+	  	<dragSource type="ZmMailMsg" />
+      		<contextMenu>
+		        <menuItem label="${msg.zmantis_about}" id="IMANTIS_ABOUT" />
+        	</contextMenu>
+       </zimletPanelItem>
+
+       <userProperties>
+        <property type="string" label="${msg.zmantis_username}" name="my_zmantis_username" required="true" />
+        <property type="password" label="${msg.zmantis_pass}" name="my_zmantis_pass" required="true" />
+        <property type="string" label="${msg.zmantis_url}" name="my_zmantis_url" required="true" value="https://www.example.com/mantisbt/" />
+	<property type="string"  label="${msg.zmantis_tag}" name="my_zmantis_tag" value="" />
+       </userProperties>
+    
+</zimlet>
+

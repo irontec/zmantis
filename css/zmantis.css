@@ -1,0 +1,86 @@
+.ImgIMANTIS-panelIcon {
+	background: url("resources/ironmantis.png") no-repeat 0 0;
+	width: 16px;
+	height: 16px;
+}
+
+.IMANTIS-icon-right {
+	background: url("resources/ironmantis.png") no-repeat 100% 50%;
+}
+
+
+#zmantis_container {
+	height:315px;
+	padding:0;
+	margin:6px; 0 10px 0;
+}
+
+#zmantis_container ul, #zmantis_atts ul {
+	padding:0;
+	margin:0;
+}
+
+#zmantis_atts label{
+	display: inline-block;
+}
+
+#zmantis_container ul li {
+	list-style:none;
+	padding-left:5px;
+}
+
+
+#zmantis_contactIden {
+	padding:3px;
+}
+
+.center {
+	text-align:center;
+}
+
+.big {
+	font-size:25px;
+	font-weight:bold;
+}
+
+.med {
+	font-size:18px;
+}
+
+.marTop {
+	margin-top:30px;
+}
+
+#zmantis_atts {
+	height:50px;
+	padding:0;
+	margin:6px; 
+}
+
+#zmantis_atts li {
+	list-style:none;
+	margin-right:4px;
+	display:inline;
+}
+
+#zmantis_logo {
+	background: url("resources/bfa.gif") no-repeat 10px center;
+	padding-left:60px;
+	padding-right:15px;
+	height:40px;
+}
+
+#zmantis_ilogo {
+	background: url("resources/irontec.png") no-repeat 10px  center;
+	padding-left:60px;
+	padding-right:15px;
+	height:40px;
+}
+
+#zmantis_powered {
+	float : right;
+}
+
+#zmantis_tinput {
+        width : 100%;
+}

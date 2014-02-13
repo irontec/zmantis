@@ -1,0 +1,34 @@
+2013-09-09 zmantis 1.1.9
+    * Fix new lines in plain text emails in zimbra7 
+    * Fixed a bug with users without realname
+
+2013-07-30 zmantis 1.1.8
+    * Fixed base64 content of attachments
+    * Fixed subprojects listing
+
+2013-05-16 zmantis 1.1.7
+    * Fixed a bug with embebed HTML images in mails
+
+2013-01-10 zmantis 1.1.6
+    * Added Zimbra 8 compatibility
+
+2012-04-04 zmantis 1.1 beta 5
+    * Corrected base64 jar file location (thx Klug @ Zimbra Forums)
+    * Corrected version numbering at xml definition file
+
+2011-10-26 zmantis 1.1 beta 4
+    * Fixed a bug with long XML Soap Messages
+    * Fixed a bug with XML parsing in Firefox
+
+2011-10-26 zmantis 1.1 beta3
+    * Fixed a bug while adding zsugar button when no context menu is available
+    * Added links in IssueID and NoteID Context Messages
+
+2011-10-17 zmantis 1.1 beta2
+    * Corrected About Dialog
+    * Added en/EN Localization
+    * Fixed Issue title inputbox for Firefox 
+
+2011-10-11 zmantis 1.1 beta1
+    * Added a new feature to search for alternative mail address
+
