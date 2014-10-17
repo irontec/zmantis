@@ -77,8 +77,8 @@ com_irontec_zmantisH.prototype.menuItemSelected = function(itemId) {
 com_irontec_zmantisH.prototype.initializeToolbar =
     function(app, toolbar, controller, viewId) {
 
-    if (viewId == ZmId.VIEW_CONVLIST || viewId == ZmId.VIEW_TRAD ||                     // Zimbra /
-       viewId == ZmId.VIEW_CONVLIST+"-main" || viewId == ZmId.VIEW_TRAD+"-main" ){      // Zimbra 8+
+    if (viewId.slice(0, ZmId.VIEW_CONVLIST.length) == ZmId.VIEW_CONVLIST ||
+	viewId.slice(0, ZmId.VIEW_TRAD.length) == ZmId.VIEW_TRAD ) {
         // Get the index of "View" menu so we can display the button after that
         var buttonIndex = 0;
         for (var i = 0; i < toolbar.opList.length; i++) 
@@ -98,24 +98,9 @@ com_irontec_zmantisH.prototype.initializeToolbar =
         // Creates the button with an id and params containing the button details
         var button = toolbar.createOp("SEND_MANTIS_TOOLBAR", buttonParams);
         button.addSelectionListener(new AjxListener(this, this._addMantisMsg,controller));   
-    }
-};
 
-
-/***
- * com_irontec_zmantisH.prototype.init
- * 
- * Init the Zimlet.
- * 
- * It adds the zMantis button at the end of context menu, just after the 
- * View Icon. When this button is clicked, it will callback private
- * _addMantisMsg function. 
- */
-com_irontec_zmantisH.prototype.init = function() {
-    var controller = appCtxt.getCurrentController();
-    
-    /* If context menu is available */
-    if (controller.getActionMenu){
+        /* If context menu is available */
+        if (controller.getActionMenu){
             var menu = controller.getActionMenu();
     
             // Find the Last Menu Position
@@ -138,6 +123,22 @@ com_irontec_zmantisH.prototype.init = function() {
             var mi = menu.createMenuItem("SEND_MANTIS_MENU", menuParams);
             mi.addSelectionListener(new AjxListener(this, this._addMantisMsg,controller));
         }
+
+    }
+};
+
+
+/***
+ * com_irontec_zmantisH.prototype.init
+ *
+ * Init the Zimlet.
+ *
+ * It adds the zMantis button at the end of context menu, just after the
+ * View Icon. When this button is clicked, it will callback private
+ * _addMantisMsg function.
+ */
+com_irontec_zmantisH.prototype.init = function() {
+    var controller = appCtxt.getCurrentController();
     
     /* Start fetching Mantis Access levels 
      * This will ensure us that the connection with mantis can be established and 
