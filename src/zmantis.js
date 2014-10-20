@@ -572,7 +572,12 @@ com_irontec_zmantisH.prototype._displayNewNoteDataDialog = function(msg){
 
     _innertext += '\n\n'+this.msg.subject + '\n\n' + body;
 
-    this.dwtext = new ZmHtmlEditor(this.pNoteView, {mode: "text/plain"});
+    if (typeof DwtHtmlEditor === "function")
+        this.dwtext = new ZmHtmlEditor(this.pNoteView);
+    else
+        this.dwtext = new ZmHtmlEditor({parent: this.pNoteView});
+
+    this.dwtext.setMode("text/plain");
     this.dwtext.setContent(_innertext);
     if (appCtxt.getShell()._currWinSize.y < 700) {
     	this.dwtext.setSize(550,160); 
