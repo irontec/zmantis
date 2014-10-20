@@ -426,8 +426,8 @@ com_irontec_zmantisH.prototype._loadNoteView = function() {
         html[i++] = "<div id='zmantis_note'style='padding:bottom:2px'>"+this.getMessage("zmantis_note")+"</div>";
         html[i++] = "<div id='zmantis_atts' align='float:right'></div>";
     	if (appCtxt.getShell()._currWinSize.y >= 700) {
-        	html[i++] = "   <a href='"+this.getMessage("zmantis_powered")+"' target='_blank'>";
-        	html[i++] = "   <img src='"+this.getResource("resources/Poweredby.png")+"' border='0' align='right'/></a>";
+            html[i++] = "   <div id='zmantis_powered_logo'><a href='"+this.getMessage("zmantis_powered")+"' target='_blank'>";
+            html[i++] = "   <img src='"+this.getResource("resources/Poweredby.png")+"' border='0' align='right'/></a></div>";
 	}
         return html.join("");
 }
@@ -572,7 +572,8 @@ com_irontec_zmantisH.prototype._displayNewNoteDataDialog = function(msg){
 
     _innertext += '\n\n'+this.msg.subject + '\n\n' + body;
 
-    this.dwtext = new DwtHtmlEditor({parent: this.pNoteDialog, content:_innertext});
+    this.dwtext = new ZmHtmlEditor(this.pNoteView, {mode: "text/plain"});
+    this.dwtext.setContent(_innertext);
     if (appCtxt.getShell()._currWinSize.y < 700) {
     	this.dwtext.setSize(550,160); 
     } else {
