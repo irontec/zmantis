@@ -279,12 +279,13 @@ SOAPClient._node2object = function(node, wsdlTypes)
 	// leaf node
 	if (node.childNodes.length == 1 && (node.childNodes[0].nodeType == 3 || node.childNodes[0].nodeType == 4))
 		return SOAPClient._node2object(node.childNodes[0], wsdlTypes);
-	//var isarray = SOAPClient._getTypeFromWsdl(node.nodeName, wsdlTypes).toLowerCase().indexOf("arrayof") != -1;
-	
-	// IRONHACK: Hack due to mantis non-standard naming of the array 
-	//var isarray = SOAPClient._getTypeFromWsdl(node.nodeName, wsdlTypes).toLowerCase().indexOf("array") != -1;
-	
-	var isarray = node.attributes.getNamedItem("xsi:type").nodeValue.toLowerCase().indexOf("array") != -1;
+
+        // Get attribute type
+	var type = node.attributes.getNamedItem("xsi:type");
+        if (!type)
+                return null;
+
+        var isarray = type.value.toLowerCase().indexOf("array") != -1;
 	
 	// object node
 	if(!isarray)
