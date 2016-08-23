@@ -1,4 +1,4 @@
-<zimlet name="com_irontec_zmantis" version="1.1.13" description="Mantis Bugtracking integration">
+<zimlet name="com_irontec_zmantis" version="1.1.14" description="Mantis Bugtracking integration">
         <!-- Source Files -->
 	<include>src/md5.js</include>
 	<include>src/mantissoapapi.js</include>
