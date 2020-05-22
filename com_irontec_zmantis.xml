@@ -1,4 +1,4 @@
-<zimlet name="com_irontec_zmantis" version="1.1.14" description="Mantis Bugtracking integration">
+<zimlet name="com_irontec_zmantis" version="1.1.15" description="Mantis Bugtracking integration">
         <!-- Source Files -->
 	<include>src/md5.js</include>
 	<include>src/mantissoapapi.js</include>
@@ -27,6 +27,7 @@
 
         <!-- Library JAR files -->
         <resource>base64coder.jar</resource>
+        <resource>commons-httpclient-3.1.jar</resource>
 
         <!-- Zimlet Handler object -->
 	<handlerObject>com_irontec_zmantisH</handlerObject>
